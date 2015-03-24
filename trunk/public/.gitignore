@@ -1,1 +1,3 @@
 vendor/
+app/wp-content/themes/app/.sass-cache/
+app/wp-content/themes/app/node_modules/

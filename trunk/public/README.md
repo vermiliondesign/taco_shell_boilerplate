@@ -1,5 +1,7 @@
 # TACO SHELL
-A Frontend and Backend Project-Starter for WordPress. Frontend: compiles SASS with grunt. Backend: hooked up with tacowordpress.
+A Frontend and Backend Project-Starter for WordPress.
+Frontend: compiles SASS with Grunt.
+Backend: build CPT's and CF's with CRUD-like methodology, using tacowordpress.
 
 ## BACKEND Setup
 tacowordpress Project Starter

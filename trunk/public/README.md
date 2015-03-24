@@ -16,7 +16,7 @@ To ensure all the counterparts are installed, run
 ##### To begin a new WordPress Project:
 
 1. cd into the public directory, where the composer.json file is
-  1a. run 'composer install' to install the vendor directory
+  * run 'composer install' to install the vendor directory
   
 This installs tacowordpress. [See the github page for more info](https://github.com/tacowordpress/tacowordpress). Tacowordpress is managed by Brian Haveri on Packagist, [here](https://packagist.org/packages/tacowordpress/tacowordpress), and is a similar plugin to [ACF](http://www.advancedcustomfields.com/), but puts Meta Box & Custom Field creation and "Management" to the backend, not in the Dashboard.
 
@@ -24,7 +24,7 @@ This installs tacowordpress. [See the github page for more info](https://github.
 ## FRONTEND Setup
 Grunt / SASS Project Starter
 
-##### Theme Requirements (to compile with grunt):
+##### Theme Requirements (to compile SASS with grunt):
 
 * [Node.js](http://nodejs.org) Install Node (globally installs so you can run it locally, on a project-to-project basis)
 * [Grunt](http://gruntjs.com) Install Grunt: npm install -g grunt-cli (globally installs so you can run it locally, on a project-to-project basis)
@@ -40,16 +40,16 @@ To ensure all the counterparts are installed, run
 ##### To Compile SCSS with Grunt:
 
 1. cd into the themes' app directory, where the gruntfile.js and the package.json files are
-    1a. run 'npm install' to install the node_modules directory (including grunt and compass, as defined on the package.json in themes' app directory)
-    1b. run 'grunt' (default task for grunt, as defined on gruntfile.js in themes' app directory)
-    1c. run 'grunt dev' (task setup to run the watch task, as defined on gruntfile.js in themes' app directory)
+  * run 'npm install' to install the node_modules directory (including grunt and compass, as defined on the package.json in themes' app directory)
+  * run 'grunt' (default task for grunt, as defined on gruntfile.js in themes' app directory)
+  * run 'grunt dev' (task setup to run the watch task, as defined on gruntfile.js in themes' app directory)
 
 To Compile SCSS without npm/grunt/compass:
 
 1. cd into the themes' app directory, where the gruntfile.js and the package.json files are
-    1a. inside the themes' app directory
-    1b. on _/scss/main.scss, comment out the @include 'compass' on main.scss
-    1c. run 'sass --watch _/scss/main.scss:_/css/main.css'
+  * inside the themes' app directory
+  * on _/scss/main.scss, comment out the @include 'compass' on main.scss
+  * run 'sass --watch _/scss/main.scss:_/css/main.css'
 
 
 ## With the above Steps tested - and Frontend & Backend are Ready...

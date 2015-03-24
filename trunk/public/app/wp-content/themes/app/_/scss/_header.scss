@@ -1,0 +1,227 @@
+//clearfix
+.extra .details:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.header-default {
+  .fa-search:hover {
+    @include transform(rotate(-10deg));
+  }
+}
+
+
+.searchbtn .fa-search,
+.site-search-toggle .fa-close {
+  //font-size: 1.2rem;
+  //padding: 9px 2px 2px;
+  @include tranzish(all 200ms ease);
+}
+
+.searchbtn_close {
+  display: none;
+}
+
+
+
+.header-home {
+background: -moz-linear-gradient(left,  rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.25) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0.8)), color-stop(100%,rgba(255,255,255,0.25))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.25) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.25) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.25) 100%); /* IE10+ */
+background: linear-gradient(to right,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.25) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', endColorstr='#40ffffff',GradientType=1 ); /* IE6-9 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  .table {
+    width: 100%;
+  }
+  a:hover, a:focus {
+    color: $blue_dark;
+    i {
+      color: $blue_black;
+    }
+  }
+  .menus {
+    text-align: right;
+    position: relative;
+    .menu {
+      display: inline-block;
+      li {
+        display: inline-block;
+        margin-right: 18px;
+      }
+    }
+    .menu.social {
+      margin-right: 37px;
+      li {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+// header logo
+.header-home {
+  h1 {
+    margin-top: 10px;
+    margin-bottom: 16px;
+  }
+}
+
+
+/*
+DESKTOP ONLY
+*/
+/////     .main-menu layout     /////
+
+@media only screen and (min-width: 1115px) {
+  // only for wide desktop be concerned with keeping extra open
+  .extra.keep-visible {
+    opacity: 1 !important;
+  }
+  
+  // extra in header for wide desktop
+  .header-default {
+    .extra {
+      width: 258px !important;
+      width: 19% !important;
+      max-width: 258px !important;
+    }
+  }
+}
+
+// begin after tablet
+@media only screen and (min-width: 769px)  {
+
+  body.home {
+    .header-default {
+      .logo, .extra {
+        opacity: 0;
+        //@include tranzish(opacity .2s ease-in-out);
+        //@include delay(.3s);
+      }
+    }
+    .header-default {
+      .stick.stuck {
+        .logo, .extra {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  
+.searchbtn .fa-search,
+.site-search-toggle .fa-close {
+  font-size: 1.2rem;
+  padding-top: 8px;
+}
+  
+  
+}
+
+
+
+/* begin awkward in between tablet sizes */
+@media only screen and (min-width: 769px) {
+  // header default includes extra and logo
+  .header-default {
+    .extra {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 258px;
+      width: 30%;
+      max-width: 258px;
+      display: inline-block;
+      z-index: 100;
+      //background:red;
+      -webkit-transform: translateZ(100px);
+      transform: translateZ(100px);
+      height: $top_level_height;
+      .details {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      .site-search-toggle {
+        width: 12%;
+        float: left;
+        position: relative;
+      }
+      .cta-persistent {
+        width: 86%;
+        float: right;
+      }
+      a {
+        color: $blue_dark;
+      }
+      a.cta {
+        width: 47%;
+        font-size: .675rem;
+        letter-spacing: .065rem;
+        padding: 8px 10px;
+        min-width: 50px;
+        margin: 0;
+        color: white;
+      }
+      a.cta:hover {
+        color: $yellow;
+        background: white;
+      }
+    }
+  }
+
+  .header-default {
+    .logo {
+      -webkit-transform: translateZ(100px);
+      transform: translateZ(100px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100 !important;
+      display: block;
+      height: $top_level_height;
+      //background:red;
+      width:18%;
+      margin-left: 10px;
+      h1 {
+        position: absolute;
+        margin: 0;
+        display: block;
+        top: 0;
+        left: 0;
+        top: 46.8%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%);
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1114px) and (min-width: 769px) {
+  body.home {
+    .header-default {
+      .logo, .extra {
+        display: none;
+      }
+    }
+  }
+}

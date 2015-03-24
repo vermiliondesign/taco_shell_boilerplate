@@ -1,0 +1,417 @@
+///// different search btn for different widths for diff effects /////
+
+// temporary namespace for these wanting to reuse cube as class
+
+.header-default {
+  .searchbtn.desktop,
+  .searchbtn.mobile {
+    display: none;
+  }
+
+  .site-search-contain.desktop,
+  .site-search-contain.mobile {
+    display: none;
+  }
+
+  // only for ie/firefox
+  // no reflections
+  .searchbtn.ie,
+  .searchbtn_close.ie {
+    background: red;
+    display: none;
+  }
+  
+  .site-search-contain.desktop {
+    width: 50%;
+    margin: 0 auto;
+    background-color: $gray_light;
+  }
+
+  .site-search-contain.mobile {
+    text-align: center;
+    width: 35%;
+    margin: 0 auto;
+    position: relative;
+    height: 80px;
+    form.search-form {
+      input[type="text"] {
+        border: solid 1px $blue;
+      }
+    }
+  }
+
+  form.search-form {
+    padding-top: 23px;
+    input[type="text"],
+    button[type="submit"] {
+      display: inline-block;
+      float: left;
+    }
+    input[type="text"] {
+      width: 75%;
+      border: none;
+      border-color: transparent;
+      box-shadow: none;
+      font-family: "Helvetica", sans-serif;
+      font-size: 1rem;
+      cursor: text;
+    }
+    button[type="submit"] {
+      color: white;
+      background: $blue_light;
+      padding: 0;
+      width: 15%;
+      margin-left: -10px;
+      height: 2.3125rem;
+      overflow: hidden;
+      i {
+        font-size: 1.2rem;
+      }
+    }
+    
+    button[type="submit"]:hover {
+      color: $blue_dark;
+    }
+  }
+
+  form.search-form:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+
+  .search-field::-webkit-input-placeholder {
+    color: $blue;
+  }
+
+  .search-field:-moz-placeholder {
+    color: $blue;
+  }
+
+  .search-field::-moz-placeholder {
+    color: $blue;
+  }
+
+  .search-field:-ms-input-placeholder {
+    color: $blue;
+  }
+
+
+  /*
+  * desktop 3d flip
+  */
+
+  @media only screen and (min-width: 1115px) {
+    .site-search-contain.desktop {
+      display: inherit;
+    }
+    .searchbtn.desktop {
+      display: inherit;
+    }
+    
+    .searchbtn.mobile,
+    .site-search-contain.mobile {
+      display: none !important;
+    }
+    .cube-contain {
+      font-family: sans-serif;
+      background: $gray_light;
+      // -webkit-perspective: 1000px;
+      // perspective: 1000px;
+      -webkit-font-smoothing: antialiased;
+      -webkit-backface-visibility: hidden;
+      transform: translateZ(0);
+      -webkit-text-stroke: 0px !important;
+    }
+    
+    // wider input type text for desktop
+    form.search-form input[type="text"] {
+      width: 85%;
+    }
+
+
+    /* Container box to set the sides relative to */
+    .cube {
+      text-align: center;
+      margin: 0 auto;
+      height: 80px;
+      -webkit-transition: -webkit-transform 600ms;
+      transition: transform 600ms; /* Animate the transform properties */
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      position: relative;
+      z-index: 10;
+      background: white;
+    }
+
+    /* The two faces of the cube */
+    .flippety,.flop {
+      // background: white;
+      height: 80px;
+      position: relative;
+    }
+
+    /* Position the faces */
+    .flippety {
+      -webkit-transform: translateZ(40px);
+      transform: translateZ(40px);
+    }
+
+    .flop {
+      -webkit-transform: rotateX(-90deg) translateZ(-40px);
+      transform: rotateX(-90deg) translateZ(-40px);
+    }
+
+    .flippety {
+      
+    }
+
+    .flippety:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 9px;
+      background: white;
+      width: 100%;
+    }
+
+    .flop {
+      background: $gray_light;
+    }
+    .flop:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -2px;
+      left: 0;
+      height: 9px;
+      background: $gray_light;
+      width: 100%;
+    }
+
+    /* Rotate the cube */
+    .cube.active {
+      -webkit-transform: rotateX(89deg);
+      transform: rotateX(89deg); /* Text bleed at 90º */
+    }
+    
+  }
+
+  @media only screen and (max-width: 1114px) and (min-width: 50px) {
+    .searchbtn.desktop,
+    .site-search-contain.desktop {
+      display: none !important;
+    }
+    .searchbtn.mobile {
+      display: inherit;
+    }
+  }
+
+
+
+  // only for mobile
+  @media only screen and (max-width: 629px) {
+    .site-search-contain.mobile {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}
+
+
+
+
+/*
+* Search inside the .header-home
+*/
+
+// for no-reflections
+// hooks into modernizr's conditional html classes
+// see ie.scss when it turns on
+
+.home-search-container.no-reflections {
+  display: none;
+}
+
+
+.header-default {
+  .home-search-container.no-reflections {
+    margin-top: 0;
+    // background: red;
+    // i {
+    //   color: $blue_dark;
+    // }
+    .searchbox-icon,
+    .searchbox-submit {
+      color: $blue_black;
+    }
+    .searchbox-icon:hover {
+      i {
+        color: $blue_dark;
+      }
+    }
+    .searchbox-submit,
+    .searchbox-submit:hover {
+      //background: white;
+      background: white;
+      i {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+
+
+.home-search-container {
+    //margin:50px auto;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 18px;
+    width: 37px;
+    height: 37px;
+}
+
+.searchbox{
+    position:relative;
+    min-width:37px;
+    width:0%;
+    height:37px;
+    float:right;
+    overflow:hidden;
+    
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    -ms-transition: width 0.3s;
+    -o-transition: width 0.3s;
+    transition: width 0.3s;
+}
+
+.searchbox-input{
+    top:0;
+    right:0;
+    border:0;
+    outline:0;
+    width:100%;
+    height:50px;
+    margin:0;
+    border: none !important;
+}
+.searchbox-input::-webkit-input-placeholder {
+    color: $gray_light;
+}
+.searchbox-input:-moz-placeholder {
+    color: $gray_light;
+}
+.searchbox-input::-moz-placeholder {
+    color: $gray_light;
+}
+.searchbox-input:-ms-input-placeholder {
+    color: $gray_light;
+}
+
+.searchbox-icon,
+.searchbox-submit {
+    width:37px;
+    height:37px;
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    padding:0;
+    margin:0;
+    border:0;
+    outline:0;
+    text-align:center;
+    cursor:pointer;
+    color: white;
+}
+
+
+
+
+.searchbox-icon {
+  i {
+    padding-top: 11px;
+  }
+}
+.searchbox-icon:hover {
+  i {
+    color: $blue_dark;
+  }
+}
+.searchbox-submit,
+.searchbox-submit:hover {
+  //background: white;
+  background: white;
+  i {
+    color: $yellow;
+  }
+}
+
+// when it is not open
+.home-search-container {
+  .searchbox-input,
+  .searchbox-submit {
+    display: none;
+  }
+}
+
+
+// when it is open
+.home-search-container.open {
+  width: 600px;
+  .searchbox,
+  .searchbox-input {
+    width: 100%;
+    @include box_shadow(0px 0px 3px 1px rgba(0, 0, 0, 0.28));
+  }
+  .searchbox-icon {
+    i {
+      color: $blue_dark;
+    }
+  }
+  .searchbox-input {
+    display: block;
+  }
+}
+
+
+/////     404     /////
+.error404 {
+  .main-page.default {
+    form.search-form {
+      padding-top: 23px;
+      input[type="text"],
+      button[type="submit"] {
+        display: inline-block;
+        float: left;
+      }
+      input[type="text"] {
+        width: 75%;
+        border: none;
+        border-color: transparent;
+        box-shadow: none;
+        font-family: "Helvetica", sans-serif;
+        font-size: 1rem;
+        cursor: text;
+      }
+      button[type="submit"] {
+        color: white;
+        background: $blue_light;
+        padding: 0;
+        width: 15%;
+        margin-left: -10px;
+        height: 2.3125rem;
+        overflow: hidden;
+        i {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

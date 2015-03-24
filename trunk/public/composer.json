@@ -1,0 +1,9 @@
+{
+  "name": "vermilion/app",
+  "description": "vermilion/app",
+  "license": "proprietary",
+  "minimum-stability": "dev",
+  "require": {
+    "tacowordpress/tacowordpress": "dev-master"
+  }
+}

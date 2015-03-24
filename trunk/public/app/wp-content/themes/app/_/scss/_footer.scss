@@ -1,0 +1,240 @@
+// clearfix
+footer.main-footer form:after,
+.small-print:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+// footer top
+.footer-top .container {
+  border-bottom: solid 1px $gray_medium;
+  padding-bottom: 35px;
+  margin-bottom: 15px;
+}
+
+// light gray part of footer
+.footer-top, footer.main-footer {
+  padding: 26px 0;
+  background: $gray_light;
+  color: $blue_dark;
+  a, p, h3, h5 {
+    color: $blue_dark;
+  }
+  h3 {
+    margin-bottom: 20px;
+    span {
+      display: block;
+    }
+  }
+}
+
+// main footer
+
+footer.main-footer {
+  form.where-we-serve {
+    margin: 10px 0;
+  }
+}
+
+
+// main footer
+footer.main-footer {
+  padding-bottom: 70px;
+  li.bold {
+    font-weight: 700;
+  }
+  h5 {
+    margin: 0;
+    padding: 0;
+    @include sans_serif;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  form {
+    select {
+      width: 82%;
+      float: left;
+    }
+    button {
+      width: 18%;
+      font-size: .675rem;
+      color: white;
+      background: $blue_dark;
+      text-align: center;
+      text-transform: uppercase;
+      @include sans_serif_bold;
+      padding: 10px 12px 11px 12px;
+    }
+    button:hover {
+      background: $blue;
+    }
+  }
+  ul.social {
+    display: table;
+    width: 55%;
+    margin-left: -10px;
+    li {
+      display: table-cell;
+      vertical-align: middle;
+      width: 25%;
+      a {
+        display: block;
+        padding: 10px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  a:hover {
+    color: $blue;
+  }
+}
+
+// partners panel
+.partners.panel {
+  background: $gray_dark;
+  padding-top: 0;
+  padding-bottom: 1px;
+  h3 {
+    color: $gray_medium;
+  }
+}
+
+.partners.panel {
+  a.americorp {
+    display: inline-block;
+    position: relative;
+    z-index: 200;
+    img {
+      display: block;
+      margin-top: -50px;
+    }
+  }
+  ul {
+    li {
+      display: inline-block;
+      width: 19%;
+      a {
+        display: block;
+        margin-right: 2%;
+      }
+    }
+  }
+}
+
+// relative container for logos container and controllers
+.partner-logos-container {
+  position: relative;
+}
+
+
+.partners.panel {
+  .container {
+    position: relative;
+  }
+  .controllers {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: 35%;
+    height: 100%;
+    a {
+      position: absolute;
+      font-size: 5em;
+      line-height: 1;
+      top: 0;
+      color: $gray_light;
+    }
+    .go-right:hover, .go-left:hover {
+      color: $gray_white;
+    }
+    .go-right:active, .go-right:active {
+      color: white;
+    }
+    .go-right {
+      right: -40px;
+    }
+    .go-left {
+      left: -40px;
+    }
+  }
+  .partner-logos {
+    margin-top: -140px;
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  ul {
+    width: 100%;
+    @include tranzish(all .5s ease-in-out);
+    visibility: hidden;
+  }
+  ul {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    opacity: 0;
+  }
+  ul.active {
+    left: 0;
+    right: 0;
+    visibility: visible;
+    background: transparent;
+    opacity: 1;
+    margin: 0;
+  }
+
+  ul.outgoing-right {
+    left: -100%;
+  }
+  ul.outgoing-left {
+    left: 100%;
+  }
+    
+  // give the 2nd and 3rd extra space in between
+  ul {
+    li:nth-of-type(4n + 1) a,
+    li:nth-of-type(4n + 2) a {
+      margin-right: 10%;
+      margin-left: 0;
+    }
+    li:nth-of-type(4n + 3) a,
+    li:nth-of-type(4n + 4) a {
+      margin-left: 10%;
+      margin-right: 0;
+    }
+    // 2nd and 3rd li have big space in between
+    li:nth-of-type(4n + 2) {
+      margin-right: 11%;
+    }
+    li:nth-of-type(4n + 3) {
+      margin-left: 11%;
+    }
+  }
+}
+
+// bottom bottom footer
+.small-print {
+  background: $gray_dark;
+  text-align: right;
+  padding: 10px 0;
+  .inline {
+    color: $gray_medium;
+    display: inline-block;
+    float: right;
+    margin-right: 15px;
+    font-size: .75rem;
+    img {
+      margin-top: -5px;
+      display: inline-block;
+      margin-left: 5px;
+    }
+  }
+  .inline:first-child {
+    margin-right: 0;
+  }
+  .page-link:hover {
+    color: white;
+  }
+}

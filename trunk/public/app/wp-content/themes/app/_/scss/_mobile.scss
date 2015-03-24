@@ -1,0 +1,466 @@
+/*
+* Breakpoints Details as seen on mobile.scss, menu.scss, homepage.scss, header.scss
+* min-width: 1115
+* max-width: 1200 and 630
+* max-width: 1114 and min-width: 769
+* min-width: 769
+* max-width: 768
+* min-width: 1400
+* min-width: 1600
+*/
+
+
+
+
+// extra wide monitors only
+@media only screen and (min-width: 1400px) {
+  // splash
+  .splash .figure-contain {
+    height: 730px;
+  }
+}
+
+// extra extra wide monitors only
+@media only screen and (min-width: 1600px) {
+  // splash
+  .splash .figure-contain {
+    height: 820px;
+  }
+}
+
+
+
+// desktop wide only
+@media only screen and (min-width: 1115px) {
+  // show header on top only if there's room
+  .header-home {
+    position: absolute;
+    a {
+      color: white;
+    }
+    a:hover {
+      color: $blue_dark;
+    }
+  }
+  // change sticky to stuck for wide enough devices for the nav
+  .stick.stuck {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+    height: $top_level_height;
+    z-index: 500;
+  }
+  
+  // splash
+  .splash .details {
+    margin-top: 12.5%;
+  }
+  // 46% on inner-page is too much for default page, locations single
+  .general-title {
+    padding-top: 40px;
+  }
+  // 46% on inner-page is too much for default page, locations single section view
+  .main-page .on-page-child {
+    padding-top: 40px;
+  }
+}
+
+// nav smaller font sizes when it gets really narrow
+@media only screen and (max-width: 1200px) and (min-width: 630px) {}
+
+
+// awkward inbetween tablet sizes
+@media only screen and (max-width: 1114px) and (min-width: 769px) {
+  // show header on top only if there's room
+  .header-home {
+    position: relative;
+    a, .searchbox-icon {
+      color: $blue_dark;
+    }
+    a:hover, .searchbox-icon:hover {
+      color: $blue_black;
+    }
+  }
+  // splash
+  .splash .figure-contain {
+    height: 510px;
+  }
+  .splash .details {
+    margin-top: 7%;
+  }
+  
+  // give more room for the header during awkward tablet size
+  .header-default .logo {
+    position: relative;
+  }
+  .header-default .site-search-contain.mobile {
+    position: absolute;
+    top: 0;
+    left: 35%;
+  }
+}
+
+// begin after tablet only
+@media only screen and (min-width: 769px)  {
+  // sticky footer
+  .page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -280px;
+  }
+  .page-wrap:after {
+    content: "";
+    display: block;
+  }
+  .footer-top, .page-wrap:after {
+    height: 280px;
+  }
+  
+  // big for tablet
+  body.home .splash span.handwriting {
+    font-size: 8.8rem;
+    line-height: 8.4rem;
+  }
+  
+  // when there is an image behind
+  // default page styles
+  .main-page.default {
+    .banner {
+      //max-height: 310px;
+    }
+    .with-banner {
+      .inner-page {
+        margin-top: -34%;
+      }
+    }
+  }
+  
+}
+
+// below tablet onlly
+@media only screen and (max-width: 768px) {
+  .top-menu-mobile {
+    display: block !important;
+  }
+  // some typography changes
+  h1.handwriting,
+  body.home .splash span.handwriting,
+  body.home .panel span.handwriting,
+  .main-page.all-locations .panel.our-locations span.handwriting {
+    font-size: 4rem;
+    line-height: 3.8rem;
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+  
+  .splash .details {
+    margin-top: 25%;
+  }
+  
+  // when there is an image behind
+  // default page styles
+  
+  .main-page.default {
+    .banner {
+      min-height: 20px;
+    }
+    .with-banner {
+      .inner-page {
+        margin-top: -22%;
+      }
+    }
+  }
+  
+  // break down blog sidebar style
+  .main-page.blog .blog-feed,
+  .main-page.blog aside {
+    width: 100%;
+    float: none;
+  }
+  .main-page.blog .blog-feed {
+    width: 94%;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .main-page.blog aside {
+    background: transparent;
+    width: 94%;
+    margin-right: 0;
+    margin-left: auto;
+    margin-top: 10px;
+  }
+  
+  
+  
+}
+
+// foundation small size
+@media only screen and (max-width: 641px) {
+  
+  // homepage changes
+  // blog section
+  body.home .panel.blog {
+    figcaption {
+      position: relative;
+      background: $blue_black;
+    }
+  }
+  // blog single
+  .main-page.single-blog .inner-page .blog-article {
+    padding-top: 9.2375rem;
+  }
+  ul.recent-posts {
+    padding: 0 0 0 40px !important;
+    margin: 1em 0 !important;
+  }
+  // all the h2's
+  body.home .panel h2,
+  body.home .cta-contain {
+    text-align: center !important;
+  }
+  // how it works section
+  body.home .panel.how-it-works {
+    ol {
+      li {
+        float: none;
+        width: 100%;
+        display: block;
+        padding-left: 70px;
+      }
+      li::after {
+        display: none;
+      }
+      li::before {
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  
+  .main-page.all-locations {
+    .location-list {
+      text-align: center;
+    }
+  }
+}
+
+
+/*
+* STATS
+* Dedicated to the stats modules with pillar and latches
+*/
+
+/*
+* Single Location Stats
+* Dedicated to the stats modules with pillar and latches
+*/
+
+@media only screen and (min-width: 1115px) {
+  .single-location.stats {
+    .pillar img,
+    .latch-1 {
+      width: 515px;
+      height: auto;
+    }
+  }
+  
+  // big for tablet
+  body.home .splash span.handwriting {
+    font-size: 12rem;
+    line-height: 11.4rem;
+  }
+  
+  // when there is an image behind
+  // default page styles
+  .main-page.default {
+    .banner {
+      
+    }
+    .with-banner {
+      .inner-page {
+        margin-top: -46%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1114px) and (min-width: 842px) {
+  .single-location.stats {
+    .pillar img,
+    .latch-1 {
+      width: 400px;
+      height: auto;
+    }
+    .number {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+    // .latch-3 {
+    //   width: 75%;
+    // }
+    // .latch-4 {
+    //   width: 75%;
+    //   left: 75%;
+    // }
+  }
+}
+
+@media only screen and (max-width: 841px) and (min-width: 50px) {
+  .single-location.stats {
+    .pillar img,
+    .latch-1 {
+      width: 75%;
+      height: auto;
+      margin: 0;
+    }
+    .number {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+    // collapse EVERYTHING
+    .pillar {
+      text-align: center;
+      img {
+       margin: 0 auto;
+      }
+    }
+    .latched {
+      position: relative !important;
+    }
+    .latch-1 {
+      .doodad .as-columns .number,
+      .doodad .as-columns .desc {
+        display: block;
+      }
+    }
+    .doodad.cube.with-fold.light-blue.top-left {
+      background-image: none;
+    }
+    .doodad.cube.with-fold.light-blue.top-left::before,
+    .doodad.cube.with-fold.light-blue.top-left::after {
+      display: none;
+    }
+    .latch-1, .latch-2, .latch-3, .latch-4 {
+      width: 75%;
+      height: auto;
+      margin: 0 auto;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+/*
+* Homepage
+* Overall Stats and
+* Overall Impact
+* Dedicated to the stats modules with pillar and latches
+*/
+
+@media only screen and (max-width: 960px) and (min-width: 50px) {
+  // our work
+  .overall-work.stats {
+    .pillar {
+      img {
+        width: 400px;
+      }
+    }
+  }
+  // our impact
+  .overall-impact.stats {
+    .pillar img {
+      width: 335px;
+    }
+    .latch-2 {
+      width: 460px;
+      left: -459px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 50px) {
+  // our work
+  body.home .panel.our-work  {
+    text-align: center;
+  }
+  .stats .number {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .overall-work.stats {
+    margin: 0 auto;
+    .pillar {
+      img {
+        width: 100%;
+      }
+    }
+    .latched {
+      position: relative;
+    }
+    
+    .latch-1, .latch-2, .latch-3, .latch-4 {
+      width: 100%;
+      margin: 0;
+      top: 0;
+      left: 0;
+    }
+    .latch-3, .latch-4 {
+      width: 96%;
+    }
+  }
+  // our impact
+  .overall-impact.stats {
+    margin: 0 auto;
+    .pillar {
+      img {
+        width: 100%;
+      }
+    }
+    .latched {
+      position: relative;
+    }
+    .latch-1, .latch-2, .latch-3 {
+      width: 100%;
+      margin: 0;
+      top: 0;
+      left: 0;
+    }
+    .doodad.cube.with-fold.light-blue.top-right {
+      background-image: none;
+    }
+    .doodad.cube.with-fold.light-blue.top-right::before,
+    .doodad.cube.with-fold.light-blue.top-right::after {
+      display: none;
+    }
+  }
+  
+  // footer logos
+  .partners.panel .controllers {
+    display: none !important;
+  }
+  .partners.panel .partner-logos {
+    margin: 0 auto;
+    height: auto;
+  }
+  .partners.panel ul {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+  }
+  .partners.panel ul li {
+    width: 100%;
+    margin: 0 auto 20px !important;
+    text-align: center;
+    a {
+      display: inline-block;
+      margin: 0 auto !important;
+      img {
+        max-width: 300px;
+      }
+    }
+  }
+}
+

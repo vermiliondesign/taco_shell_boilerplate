@@ -1,0 +1,737 @@
+/////     font assignments     /////
+
+/*
+* utility stuff
+*/
+
+.handwriting {
+  @include handwriting;
+}
+
+// global settings
+body {
+  @include sans_serif;
+}
+
+
+/* extra bold all caps */
+.header-home a,
+.top-menu a,
+.footer-top h3,
+.panel.partners h3,
+.location-contact h5,
+.location-partners h3,
+.stats .number,
+.cta.blog,
+.back,
+.featured-story .date,
+.featured-stories .date,
+.archive-stories .date {
+  @include sans_serif_extra_bold;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+}
+
+.header-home a,
+.top-menu a {
+  font-size: .8rem;
+  letter-spacing: .2em;
+  i {
+    font-size: 1rem;
+  }
+}
+
+
+/*
+* CTA'S
+*/
+
+.cta,
+.cta-container li a,
+.page-numbers.prev,
+.page-numbers.next {
+  @include sans_serif_bold;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: white;
+}
+
+.cta.blog,
+.cta.back,
+.cta.excerpt,
+a.cta.excerpt .status,
+.archive-stories .date {
+  font-size: .78rem;
+  letter-spacing: .08rem;
+}
+
+
+
+
+// main menu
+.main-menu > ul.menu > li a,
+.main-menu > ul.menu > li.where-we-serve > ul.sub-menu > li.region-group > a {
+  @include sans_serif_narrow_bold;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
+.main-menu > ul.menu > li > ul.sub-menu > li a {
+  @include sans_serif_semi_bold;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+
+
+/*
+* FOOTER
+*/
+
+.footer-top {
+  h3 {
+    font-size: 1.8rem;
+    span {
+      font-size: 2.6rem;
+    }
+  }
+}
+
+
+/*
+* DEFAULT H1's
+*/
+
+h1.handwriting {
+  font-size: 6.5rem;
+  line-height: 4.7rem;
+}
+
+h1.mixed-type-1 {
+  span.caps {
+    @include sans_serif_extra_bold;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+  }
+  span.handwriting {
+    font-size: 6.6rem;
+    line-height: 4.7rem;
+    display: block;
+  }
+}
+
+.on-page-parent {
+  
+}
+.on-page-child {
+  h2 {
+    @include sans_serif_extra_bold;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+  }
+}
+
+
+/*
+* SIDEBAR MENU
+*/
+
+aside.sidebar {
+  a, a:link, a:visited {
+    color: white;
+  }
+  a:hover, a:active {
+    color: $yellow;
+  }
+  li.active > a,
+  li.current_page_item > a {
+    color: $yellow !important;
+  }
+  li.active.active-include {
+    > a {
+    color: white !important;
+      &:before {
+        display: none;
+      }
+    }
+  }
+  > ul.menu li a {
+    @include sans_serif_bold;
+    font-size: 1.575rem;
+  }
+  > ul.menu li > ul.sub-menu li a {
+    @include sans_serif_bold;
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.045rem;
+  }
+  > ul.menu li > ul.sub-menu li > ul.sub-menu li a {
+    @include sans_serif;
+    text-transform: none;
+    font-size: .9rem;
+  }
+}
+
+// no border for single location pages
+
+.locations-sections {
+  aside.sidebar {
+    li.active {
+      margin-bottom: 0;
+      a {
+        border-bottom: none !important;
+        
+      }
+      // > a {
+      //   margin-bottom: 0 !important;
+      // }
+    }
+    li.active > ul.sub-menu {
+      border-bottom: solid 1px $blue_medium;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+/*
+* SIDEBAR MENU ON DEFAULT PAGE
+*/
+
+aside.sidebar.page-default {
+  a, a:link, a:visited {
+    color: white;
+  }
+  a:hover, a:active {
+    color: $yellow;
+  }
+  li.active > a {
+    color: $yellow;
+  }
+  > ul.menu li a {
+    // @include sans_serif_narrow_bold;
+    // text-transform: uppercase;
+    // font-size: 1rem;
+    // letter-spacing: 0.045rem;
+  }
+  > ul.menu li > ul.sub-menu li a {
+    // @include sans_serif_bold;
+    // text-transform: none;
+    // font-size: .9rem;
+  }
+  > ul.menu li > ul.sub-menu li > ul.children {
+    margin: 0;
+    border-bottom: solid 1px $blue_medium;
+  }
+  > ul.menu li > ul.sub-menu li > ul.children li a {
+    border-bottom: 0;
+    margin: 0;
+    padding: 3px 0;
+  }
+  > ul.menu li > ul.sub-menu li > ul.children li a {
+    @include sans_serif;
+    text-transform: none;
+    font-size: .9rem;
+  }
+}
+
+/*
+* for WYSIWYG areas
+*/
+.content {
+  a,
+  a:link,
+  a:visited {
+    color: $blue;
+    text-decoration: underline;
+  }
+  a:hover {
+    color: $gray_white;
+    //text-decoration: underline;
+  }
+  a:active {
+    color: white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: white;
+    @include sans_serif_bold;
+    //letter-spacing: 0.055rem;
+  }
+  h2 {
+    font-size: 1.5625rem;
+  }
+  h3, h4 {
+    font-size: 1.125rem;
+  }
+  h5, h6 {
+    font-size: 1rem;
+  }
+  p, ul, ol, span {
+    font-size: 1.1rem;
+    color: $blue_light;
+  }
+  pre {
+    @include sans_serif;
+    color: $blue_medium;
+  }
+  blockquote {
+    color: $yellow;
+    margin: 0;
+    padding: 0;
+    border: none;
+    p {
+      color: $yellow;
+      font-size: 1.5625rem;
+      @include sans_serif_bold;
+      position: relative;
+      margin-bottom: 0;
+    }
+    p:before {
+      position: absolute;
+      top: 0;
+      left: -15px;
+      display: block;
+      content: "\201C";
+    }
+    p:after {
+      display: inline-block;
+      padding-left: 5px;
+      content: "\201D";
+    }
+  }
+  cite {
+    color: $gray_medium;
+    font-style: italic;
+    @include sans_serif;
+  }
+  figure {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  figcaption {
+    p {
+      @include sans_serif_bold;
+      letter-spacing: 0.055rem;
+      font-size: 1.125rem;
+      color: white;
+    }
+    .detail {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  h2.handwriting {
+    @include handwriting;
+    font-size: 3.8rem;
+    margin: 15px 0;
+  }
+  h2.handwriting.light-blue {
+    color: $blue_light;
+  }
+  .cite {
+    font-style: italic;
+    font-size: .9rem;
+  }
+  .cite, .date {
+    margin: 0;
+  }
+  .name {
+    @include sans_serif_semi_bold;
+    font-style: normal;
+  }
+  .title {
+    font-size: .825rem;
+    margin-top: 0;
+  }
+}
+
+/*
+* on white content
+*/
+
+.on-white {
+  .content {
+    a,
+    a:link,
+    a:visited {
+      color: $blue;
+      text-decoration: none !important;
+    }
+    a:hover {
+      color: $blue_light;
+      //text-decoration: underline;
+    }
+    a:active {
+      color: $gray_white;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      color: $blue_dark;
+      @include sans_serif_bold;
+      letter-spacing: 0.055rem;
+    }
+    h2 {
+      font-size: 1.5625rem;
+    }
+    h3, h4 {
+      font-size: 1.125rem;
+    }
+    h5, h6 {
+      font-size: 1rem;
+    }
+    p, ul, ol, span {
+      color: $blue_dark;
+    }
+    blockquote {
+      color: $yellow;
+      margin: 0;
+      padding: 0;
+      border: none;
+      p {
+        color: $yellow;
+        font-size: 1.5625rem;
+        @include sans_serif_bold;
+        position: relative;
+        margin-bottom: 0;
+      }
+      p:before {
+        position: absolute;
+        top: 0;
+        left: -15px;
+        display: block;
+        content: "\201C";
+      }
+      p:after {
+        display: inline-block;
+        padding-left: 5px;
+        content: "\201D";
+      }
+    }
+    cite {
+      color: $gray_medium;
+      font-style: italic;
+      @include sans_serif;
+    }
+    figure {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    figcaption {
+      p {
+        @include sans_serif_bold;
+        letter-spacing: 0.055rem;
+        font-size: 1.125rem;
+      }
+    }
+    h2.handwriting {
+      @include handwriting;
+      font-size: 3.8rem;
+      margin: 15px 0;
+    }
+    h2.handwriting.light-blue {
+      color: $blue_light;
+    }
+  }
+}
+
+
+/*
+* MISC
+*/
+
+.stats .number {
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+.subtitle {
+  color: white;
+}
+
+.subtitle,
+.stats .desc .title {
+  @include sans_serif_bold;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: white;
+}
+
+.subtitle.strong {
+  font-size: 1.25rem;
+  @include sans_serif_extra_bold;
+  color: white;
+}
+
+// modal
+.modal .number {
+  @include sans_serif_extra_bold;
+  font-size: 3rem;
+  line-height: 2.5rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+/*
+* HOMEPAGE
+*/
+
+body.home {
+  p, li {
+    color: white;
+  }
+  .panel {
+    span.handwriting {
+      font-size: 7.5rem;
+      line-height: 4.7rem;
+      color: $blue;
+      -webkit-font-smoothing: antialiased !important;
+    }
+  }
+  .splash {
+    span.handwriting {
+      font-size: 12rem;
+      line-height: 11.8rem;
+      color: white;
+      -webkit-font-smoothing: antialiased !important;
+    }
+  }
+}
+
+.panel.blog {
+  figcaption {
+    h3 {
+      @include sans_serif_bold;
+    }
+  }
+}
+
+/*
+* Our Locations Page
+*/
+
+.main-page.all-locations {
+  .panel.our-locations {
+    span.handwriting {
+      font-size: 7.5rem;
+      line-height: 4.7rem;
+      color: $blue;
+      -webkit-font-smoothing: antialiased !important;
+    }
+  }
+}
+
+.recent-posts {
+  .date {
+    font-size: .875rem;
+    @include sans_serif_extra_bold;
+    text-transform: uppercase;
+    letter-spacing: .065rem;
+  }
+}
+
+/*
+* Blog Landing Page Sidebar
+* Single Blog Post Sidebar
+*/
+
+
+// blog landing and
+// single blog post
+.main-page.blog,
+.main-page.single-blog {
+  aside {
+    h4 {
+      @include sans_serif_extra_bold;
+      text-transform: uppercase;
+      letter-spacing: .065rem;
+      font-size: 1.1rem;
+      color: $blue_dark;
+    }
+    h4 {
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    h5 {
+      margin-bottom: 26px;
+    }
+    .list {
+      li {
+        padding-bottom: 4px;
+      }
+      a {
+        @include sans_serif_semi_bold;
+      }
+    }
+    .list {
+      ul {
+        padding-bottom: 20px;
+      }
+      a {
+        color: $yellow;
+      }
+    }
+    .list {
+      li:hover {
+        a {
+          color: $yellow_dark;
+        }
+      }
+      li.active {
+        position: relative;
+        a {
+          color: $blue;
+        }
+      }
+      li.active:before {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -12px;
+        color: $blue;
+        font-family: "FontAwesome";
+        content: "\f0da";
+      }
+    }
+  }
+}
+
+// blog landing
+.main-page.blog {
+  
+  .location.list,
+  .tag.list {
+    ul {
+      padding-bottom: 30px;
+      border-bottom: solid 1px $gray_medium;
+    }
+  }
+    
+  .popular-reads-detail {
+    h4 {
+      font-size: 1.4rem;
+      margin-bottom: 0;
+    }
+  }
+  
+  .popular-reads-list {
+    li {
+      .date {
+        color: white;
+        @include sans_serif_extra_bold;
+        text-transform: uppercase;
+        letter-spacing: .08rem;
+        font-size: .75rem;
+      }
+      h5 {
+        text-transform: none;
+        color: $blue_dark;
+        @include sans_serif;
+        font-size: 1.25rem;
+      }
+    }
+  }
+  .archive.list {
+    .archive-year a {
+      @include sans_serif_extra_bold;
+      text-transform: uppercase;
+      letter-spacing: .065rem;
+      font-size: 1rem;
+    }
+    .archive-year > ul > li a {
+      @include sans_serif_semi_bold;
+      text-transform: none;
+      font-size: 1rem;
+      letter-spacing: normal;
+    }
+  }
+}
+
+
+
+
+/*
+* Blog Related Typography
+*/
+
+.single-blog,
+.blog {
+  .content {
+    h1, h2, h3, h4, h5, h6 {
+      text-transform: none;
+      color: $blue_dark;
+      @include sans_serif_bold;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
+    .date {
+      @include sans_serif_bold;
+      letter-spacing: .065rem;
+      color: $blue_light !important;
+      text-transform: uppercase;
+      font-size: .9rem;
+    }
+  }
+}
+
+.single-blog {
+  .content {
+    .date {
+      font-size: .78rem;
+      letter-spacing: .08rem;
+    }
+  }
+}
+
+.related-posts {
+  * {
+    margin: 0;
+  }
+  h4, .date {
+    @include sans_serif_bold;
+    letter-spacing: .065rem;
+    text-transform: uppercase;
+    font-size: .9rem;
+  }
+  h4 {
+    color: $blue_dark;
+    margin-bottom: 20px;
+  }
+  h5 {
+    color: $yellow;
+    @include sans_serif_semi_bold;
+    font-size: 1rem;
+  }
+  .date {
+    margin-top: 10px;
+    color: $gray_medium;
+  }
+}
+
+
+/* all locations location-list */
+
+.location-list {
+  ul > li a {
+    @include sans_serif_narrow_bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.045rem;
+  }
+  ul > li > ul > li a {
+    @include sans_serif_bold;
+    font-size: 1.675rem;
+    text-transform: none;
+  }
+  ul > li > ul > li > ul > li a {
+    @include sans_serif_bold;
+    text-transform: none;
+    font-size: .9rem;
+  }
+}
+

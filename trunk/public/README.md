@@ -44,7 +44,7 @@ To ensure all the counterparts are installed, run
   * run 'grunt' (default task for grunt, as defined on gruntfile.js in themes' app directory)
   * run 'grunt dev' (task setup to run the watch task, as defined on gruntfile.js in themes' app directory)
 
-To Compile SCSS without npm/grunt/compass:
+##### To Compile SCSS without npm/grunt/compass:
 
 1. cd into the themes' app directory, where the gruntfile.js and the package.json files are
   * inside the themes' app directory

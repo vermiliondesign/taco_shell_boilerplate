@@ -1,4 +1,4 @@
-# TACO SHELL
+# TACO SHELL WP BOILERPLATE
 A Frontend and Backend Project-Starter for WordPress.
 Frontend: compiles SASS with Grunt.
 Backend: build CPT's and CF's with CRUD-like methodology, using tacowordpress.

@@ -52,15 +52,18 @@ To ensure all the counterparts are installed, run
   * run 'sass --watch _/scss/main.scss:_/css/main.css'
 
 
-## With the above Steps tested - and Frontend & Backend are Ready...
+## When Frontend & Backend are Ready...
 
 * setup your host and vhost to point to project-name/trunk/public/wordpress
 * create db locally, update app/wp-config.php
-* hitting the project-name's localhost will append -4.1.1/wp-admin/install.php to your localhost, simply remove that and enter /wp-admin and it will setup the db
-* once logged into the dashboard, go to Plugins-> activate "taco_app" first, then "taco_theme_option"
+* hitting the project-name's localhost will append -4.1.1/wp-admin/install.php to your localhost, simply remove that and enter /wp-admin and it will setup the db for the first time
+#### Once logged into the dashboard,
+* go to Plugins-> activate "taco_app" first,
+* then activate "taco_theme_option"
 * go to Appearance -> Themes (activate "App")
 * get to work!
-* see tacowordpress docs for more info on building quickly and efficiently (http://tacowordpress.github.io/tacowordpress/).
+* see tacowordpress docs for more info on building quickly and efficiently
+* (http://tacowordpress.github.io/tacowordpress/).
 
 
 ###### MISC Information about the Setup:
@@ -73,7 +76,9 @@ The main root directory is as follows:
 * wordpress (symlink that points to wordpress-x.x)
 * composer.json
 
-This site uses a "wp-fresh" approach and uses symlinks to extrapolate the main custom "app" from the "wordpress core". Below is a list of the symlink configurations:
+This site uses a "wp-fresh" approach and uses symlinks to extrapolate/isolate the main custom "app" from the "wordpress core". To see the taco shell boilerplate without symlinks, check out this github page(insert symlink-less taco project here).
+
+###### Below is a list of the symlink configurations in this project:
 
 * ln -s wordpress-4.1 wordpress
 
@@ -88,6 +93,6 @@ Once you cd into the wordpress-x.x directory:
 * ln -s ../app/wp-config.php wp-config.php
 * ln -s ../app/wp-content wp-content
 
-This is done to make wordpress updates easier. Simply download the new version of wordpress and add it to the public directory (as wordpress-x.x). Update the above symlinks to point to the new wordpress update, and voila! hassle-free update, with an easy fallback incase things get silly.
+This is done to make wordpress updates easier. Simply download the new version of wordpress and add it to the public directory (as wordpress-x.x). Update the above symlinks to point to the new wordpress update, and voila! Hassle-free update, with an easy fallback, in-case things get silly during the update.
     
     

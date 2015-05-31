@@ -1,7 +1,5 @@
 // compass imports
 @import "compass";
-// get normal
-@import "normalize";
 
 // definitions
 @import "fonts";
@@ -14,33 +12,18 @@
 // define the overall styles for templates
 @import "theme";
 
-// all the menus
-@import "menu";
-
-// bookends
-@import "header";
-@import "footer";
-
-// basic page styles
-@import "page";
-
 // define modular styles
 @import "module";
 
-// define all custom templates
-@import "panels";
-@import "locations";
 
-// misc
-@import "site-search";
-@import "modal";
-@import "forms";
-@import "loading";
+//@import "modal";
 
-// media queries for breakpoints
+
+// media queries for breakpoints last
 @import "mobile";
 
-@import "ie";
+
+
 
 
 

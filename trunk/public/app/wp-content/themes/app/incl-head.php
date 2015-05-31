@@ -18,6 +18,9 @@ $theme = ThemeOption::getInstance();
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width">
   
+  <!-- fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+  
   <!-- icons -->
   <link rel="icon" href="<?php echo home_url('/'); ?>favicon.ico">
   <link rel="apple-touch-icon" sizes="152x152" href="<?php echo get_asset_path('img/apple-touch-icon-152x152.png'); ?>">
@@ -31,10 +34,10 @@ $theme = ThemeOption::getInstance();
   
   <?php wp_head(); ?>
   
-  <?php include __DIR__.'/incl-google-tag-manager.php'; ?>
-  
 </head>
 
 <?php global $body_class; ?>
 <body <?php body_class((isset($body_class)) ? $body_class : null); ?>>
+  
+<?php include __DIR__.'/incl-google-tag-manager.php'; ?>
   

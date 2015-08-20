@@ -29,13 +29,11 @@ Grunt / SASS Project Starter
 * [Node.js](http://nodejs.org) Install Node (globally installs so you can run it locally, on a project-to-project basis)
 * [Grunt](http://gruntjs.com) Install Grunt: npm install -g grunt-cli (globally installs so you can run it locally, on a project-to-project basis)
 * [Sass](http://sass-lang.com) Install SASS: gem install sass (globally installs so you can run it locally, on a project-to-project basis)
-* [Compass](http://compass-style.org) Install Compass: gem install compass (globally installs so you can run it locally, on a project-to-project basis)
 
 To ensure all the counterparts are installed, run
 
 * sass -v
 * npm -v
-* compass -v
 
 ##### To Compile SCSS with Grunt:
 

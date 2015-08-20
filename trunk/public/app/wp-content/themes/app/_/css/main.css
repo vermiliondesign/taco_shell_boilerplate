@@ -1,14 +1,10 @@
-/* line 1, ../scss/_theme.scss */
 .container, .wide-container {
   width: 96%;
   margin: 0 auto;
-  max-width: 1024px;
-}
+  max-width: 1024px; }
 
-/* line 7, ../scss/_theme.scss */
 .wide-container {
-  max-width: 1600px;
-}
+  max-width: 1600px; }
 
 /*
 * Breakpoints Details as seen on mobile.scss, menu.scss, homepage.scss, header.scss
@@ -20,3 +16,5 @@
 * min-width: 1400
 * min-width: 1600
 */
+
+/*# sourceMappingURL=main.css.map */

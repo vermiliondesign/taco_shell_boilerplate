@@ -1,0 +1,46 @@
+[
+    {
+        "name": "tacowordpress/tacowordpress",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tacowordpress/tacowordpress.git",
+            "reference": "aa493b73e5b5d4a0615442a773cad4da8f05a10a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/tacowordpress/tacowordpress/zipball/aa493b73e5b5d4a0615442a773cad4da8f05a10a",
+            "reference": "aa493b73e5b5d4a0615442a773cad4da8f05a10a",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "electrolinux/phpquery": "dev-master",
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2015-03-14 17:14:34",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Taco\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "WordPress custom post types that feel like CRUD models",
+        "homepage": "https://tacowordpress.github.io/tacowordpress/",
+        "keywords": [
+            "custom post type",
+            "custom terms",
+            "taco",
+            "tacowordpress",
+            "wordpress"
+        ]
+    }
+]
